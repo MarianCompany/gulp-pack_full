@@ -5,7 +5,7 @@ const uglify = require('gulp-uglify-es').default;
 
 const paths = {
     src: [
-        './node_modules/bootstrap/dist/js/bootstrap.js'
+        './src/js/libs_js/**/*.js'
     ],
     dest: './dist/js'
 }

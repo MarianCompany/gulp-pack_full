@@ -18,18 +18,31 @@ exports.browser_sync = tasks.browser_sync;
 exports.watch_changes = tasks.watch_changes;
 
 exports.dev = series(
-        exports.libs_css,
-        exports.css,
-        exports.libs_scripts,
-        exports.scripts,
-            exports.svg_sprite,
-            exports.raster,
-            exports.to_webp,
-        exports.ttf,
-        exports.html,
+    exports.libs_css,
+    exports.css,
+    exports.libs_scripts,
+    exports.scripts,
+    exports.svg_sprite,
+    exports.raster,
+    exports.to_webp,
+    exports.ttf,
+    exports.html,
     exports.fonts,
     parallel(
         exports.browser_sync,
         exports.watch_changes
     )
+)
+
+exports.build = series(
+    exports.libs_css,
+    exports.css,
+    exports.libs_scripts,
+    exports.build_scripts,
+    exports.svg_sprite,
+    exports.raster,
+    exports.to_webp,
+    exports.ttf,
+    exports.html,
+    exports.fonts
 )

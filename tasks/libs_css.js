@@ -6,7 +6,7 @@ const concat = require('gulp-concat');
 
 const paths = {
     src: [
-        './node_modules/bootstrap/dist/css/bootstrap.css'
+        './src/css/libs_css/**/*.css'
     ],
     dest: './dist/css'
 }
