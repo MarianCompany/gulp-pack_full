@@ -9,8 +9,9 @@ const bs = require('browser-sync');
 
 const paths = {
     src: [
+        './src/scss/**/*.scss',
         './src/css/**/*.css',
-        './src/scss/**/*.scss'
+        '!./src/css/libs_css/**/*.css'
     ],
     dest: './dist/css'
 }

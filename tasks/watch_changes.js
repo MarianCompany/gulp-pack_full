@@ -6,7 +6,7 @@ const {
 
 module.exports = function watching() {
     watch('src/**/*.html', parallel('html'));
-    watch('src/**/*.scss', parallel('css'));
+    watch(['src/**/*.scss', 'src/css/*.css'], parallel('css'));
     watch('src/**/*.js', parallel('scripts'));
     watch('src/**/*.json', parallel('html'));
     watch('src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)', parallel('raster'));
